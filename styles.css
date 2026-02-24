@@ -276,7 +276,7 @@ p {
 .strip-grid {
   display: grid;
   gap: 0.8rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .strip-item {
@@ -631,6 +631,265 @@ p {
   animation: pulseGlow 2.2s infinite;
 }
 
+/* ───── Hamburger Menu ───── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 25;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ───── E-E-A-T Credentials Bar ───── */
+.credentials-bar {
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+}
+
+.credentials-bar h3 {
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.credentials-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.credentials-list li {
+  color: #d8d8e0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.credentials-note {
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.75;
+  padding: 0.8rem;
+  background: rgba(240, 128, 0, 0.06);
+  border-radius: 12px;
+  border: 1px solid rgba(240, 128, 0, 0.15);
+}
+
+/* ───── Why Different / Barriers Section ───── */
+.why-different {
+  background: radial-gradient(circle at 30% 50%, rgba(240, 128, 0, 0.06), transparent 50%);
+}
+
+.barriers-cards .barrier-card {
+  text-align: right;
+}
+
+.barriers-cards .barrier-card .card-icon {
+  text-align: center;
+}
+
+.cards-3 {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+/* ───── Online Emphasis Section ───── */
+.online-emphasis {
+  background: radial-gradient(circle at 70% 30%, rgba(240, 128, 0, 0.06), transparent 50%);
+}
+
+.online-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.online-card {
+  text-align: center;
+}
+
+.online-card .card-icon {
+  font-size: 2.8rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ───── Case Studies Section ───── */
+.case-studies {
+  background: radial-gradient(circle at 50% 60%, rgba(240, 128, 0, 0.06), transparent 50%);
+}
+
+.case-card {
+  position: relative;
+  text-align: right;
+}
+
+.case-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #111;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.8rem;
+}
+
+.case-card h3 {
+  color: var(--text);
+  font-size: 1.15rem;
+}
+
+.case-card p {
+  color: #c8c8d0;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.case-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ───── Pricing Section ───── */
+.pricing {
+  background: radial-gradient(circle at 50% 40%, rgba(240, 128, 0, 0.08), transparent 50%);
+}
+
+.pricing-cards {
+  align-items: stretch;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.pricing-popular {
+  border-color: rgba(240, 128, 0, 0.6);
+  box-shadow: 0 0 0 1px rgba(240, 128, 0, 0.3), 0 16px 36px rgba(0, 0, 0, 0.28);
+  transform: scale(1.03);
+}
+
+.pricing-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #111;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.8rem;
+}
+
+.pricing-card h3 {
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  text-align: right;
+}
+
+.pricing-features li {
+  padding: 0.4rem 0;
+  color: #d0d0d8;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-note {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.pricing-card .btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+.pricing-reframe {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #d8d8e0;
+  padding: 1rem;
+  background: rgba(240, 128, 0, 0.08);
+  border: 1px solid rgba(240, 128, 0, 0.2);
+  border-radius: 16px;
+}
+
+/* ───── Lead Magnet Section ───── */
+.lead-magnet-card {
+  border-radius: 24px;
+  border: 1px solid rgba(240, 128, 0, 0.38);
+  background: linear-gradient(130deg, rgba(240, 128, 0, 0.15), rgba(32, 32, 36, 0.95));
+  padding: 2.2rem;
+  box-shadow: 0 0 0 1px rgba(240, 128, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.lead-magnet-content h2 {
+  font-size: 1.8rem;
+}
+
+.lead-magnet-content p {
+  max-width: 700px;
+  margin-inline: auto;
+  line-height: 1.8;
+}
+
+.lead-magnet-actions {
+  margin-top: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.lead-magnet-note {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -688,13 +947,46 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .cards-3,
   .cards-4,
-  .process-steps {
+  .process-steps,
+  .online-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-popular {
+    transform: none;
+  }
+
+  /* Hamburger visible on mobile */
+  .hamburger {
+    display: flex;
   }
 
   .nav-links {
     display: none;
+    position: absolute;
+    top: 76px;
+    right: 0;
+    left: 0;
+    background: rgba(15, 15, 16, 0.97);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    gap: 0.6rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    z-index: 20;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.6rem 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .gallery-grid {
@@ -724,6 +1016,10 @@ p {
     height: 68px;
   }
 
+  .nav-links {
+    top: 68px;
+  }
+
   .brand span {
     display: none;
   }
@@ -751,8 +1047,10 @@ p {
     height: 220px;
   }
 
+  .cards-3,
   .cards-4,
-  .process-steps {
+  .process-steps,
+  .online-grid {
     grid-template-columns: 1fr;
   }
 
@@ -770,5 +1068,9 @@ p {
 
   .footer-links {
     gap: 0.8rem;
+  }
+
+  .lead-magnet-card {
+    padding: 1.5rem;
   }
 }
