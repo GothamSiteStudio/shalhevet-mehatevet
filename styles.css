@@ -616,6 +616,23 @@ p {
   color: var(--muted);
 }
 
+.built-by {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.built-by a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.built-by a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
 .whatsapp-float {
   position: fixed;
   left: 1rem;
