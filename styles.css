@@ -41,13 +41,14 @@ a {
   margin-inline: auto;
 }
 
+/* ───── Navigation ───── */
 .topbar {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(15, 15, 16, 0.9);
+  background: rgba(15, 15, 16, 0.92);
   border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.18);
 }
 
@@ -56,6 +57,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .brand {
@@ -64,6 +66,7 @@ a {
   gap: 0.7rem;
   font-weight: 800;
   font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 .brand img {
@@ -72,6 +75,25 @@ a {
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid var(--border);
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav-links a {
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
 }
 
 .hero {
@@ -281,6 +303,13 @@ p {
   padding: 2.6rem 0;
 }
 
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 65ch;
+  margin-bottom: 1.5rem;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -358,14 +387,233 @@ p {
   box-shadow: 0 0 0 1px rgba(240, 128, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
-.footer {
-  border-top: 1px solid var(--border);
-  padding: 1rem 0 1.6rem;
+/* ───── For Who Section ───── */
+.cards-4 {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
 }
 
-.footer p {
-  font-size: 0.95rem;
+.icon-card {
   text-align: center;
+}
+
+.card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+  line-height: 1;
+}
+
+.service-card {
+  text-align: center;
+}
+
+.service-card .card-icon {
+  font-size: 2.8rem;
+}
+
+/* ───── Process Section ───── */
+.process {
+  background: radial-gradient(circle at 50% 30%, rgba(240, 128, 0, 0.08), transparent 50%);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.step-card {
+  background: linear-gradient(180deg, var(--surface), var(--surface-soft));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(240, 128, 0, 0.45);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #111;
+  font-weight: 900;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 6px 18px rgba(224, 80, 16, 0.35);
+}
+
+/* ───── Results Section ───── */
+.results-placeholder {
+  background: var(--surface);
+  border: 2px dashed var(--border);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.results-placeholder p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ───── Stars Rating ───── */
+.stars {
+  color: #ffb800;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 2px;
+}
+
+.more-reviews-note {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+/* ───── FAQ Section ───── */
+.faq-list {
+  max-width: 800px;
+  margin: 1.2rem auto 0;
+}
+
+.faq-item {
+  background: linear-gradient(180deg, var(--surface), var(--surface-soft));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  margin-bottom: 0.7rem;
+  overflow: hidden;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(240, 128, 0, 0.35);
+}
+
+.faq-item[open] {
+  border-color: rgba(240, 128, 0, 0.45);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  padding: 1rem 1.3rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item summary h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.faq-item > p {
+  padding: 0 1.3rem 1.2rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* ───── Content Pillar ───── */
+.pillar-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pillar-content h3 {
+  color: var(--accent);
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.pillar-content p {
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+
+/* ───── Footer ───── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0 2rem;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-brand {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-size: 0.92rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-keywords {
+  margin-bottom: 0.8rem;
+}
+
+.footer-keywords p {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 
 .whatsapp-float {
@@ -440,6 +688,15 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .cards-4,
+  .process-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav-links {
+    display: none;
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -492,5 +749,26 @@ p {
 
   .gallery-grid img {
     height: 220px;
+  }
+
+  .cards-4,
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+  }
+
+  .contact-actions .btn {
+    width: 100%;
+  }
+
+  .strip-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-links {
+    gap: 0.8rem;
   }
 }
