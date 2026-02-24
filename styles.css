@@ -7,6 +7,7 @@
   --accent: #f08000;
   --accent-strong: #e05010;
   --border: #2a2a31;
+  --accent-glow: rgba(240, 128, 0, 0.32);
 }
 
 * {
@@ -21,6 +22,7 @@ body {
   background: var(--bg);
   color: var(--text);
   scroll-behavior: smooth;
+  background-image: radial-gradient(circle at 10% 5%, rgba(224, 80, 16, 0.12), transparent 40%);
 }
 
 img {
@@ -46,6 +48,7 @@ a {
   background: rgba(15, 15, 16, 0.9);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(8px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.18);
 }
 
 .nav-wrap {
@@ -73,7 +76,7 @@ a {
 
 .hero {
   position: relative;
-  padding: 4rem 0 2.5rem;
+  padding: 4rem 0 2.8rem;
   background: radial-gradient(circle at 80% 15%, rgba(224, 80, 16, 0.25), transparent 40%),
     radial-gradient(circle at 20% 75%, rgba(240, 128, 0, 0.14), transparent 45%);
 }
@@ -91,6 +94,10 @@ a {
   gap: 2rem;
   align-items: center;
   grid-template-columns: 1.1fr 0.9fr;
+}
+
+.hero-copy {
+  animation: fadeUp 0.8s ease both;
 }
 
 .kicker {
@@ -126,6 +133,24 @@ p {
   max-width: 60ch;
 }
 
+.hero-points {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.hero-points li {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(240, 128, 0, 0.25);
+  color: #dddde4;
+  border-radius: 999px;
+  padding: 0.34rem 0.8rem;
+  font-size: 0.9rem;
+}
+
 .hero-actions,
 .contact-actions {
   margin-top: 1.4rem;
@@ -145,12 +170,14 @@ p {
   font-weight: 700;
   color: #111;
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  transition: transform 0.18s ease, opacity 0.18s ease;
+  transition: transform 0.18s ease, opacity 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 8px 20px rgba(224, 80, 16, 0.35);
 }
 
 .btn:hover {
   transform: translateY(-2px);
   opacity: 0.94;
+  box-shadow: 0 14px 28px rgba(224, 80, 16, 0.46);
 }
 
 .btn-small {
@@ -169,13 +196,22 @@ p {
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 1.3rem;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(240, 128, 0, 0.45);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
 }
 
 .hero-card {
+  position: relative;
   border-radius: 24px;
   overflow: hidden;
   border: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.38), 0 0 0 1px rgba(240, 128, 0, 0.14);
+  animation: fadeIn 1s ease both;
 }
 
 .hero-card img {
@@ -183,6 +219,62 @@ p {
   height: 100%;
   min-height: 410px;
   object-fit: cover;
+}
+
+.floating-badge {
+  position: absolute;
+  z-index: 2;
+  background: rgba(15, 15, 16, 0.78);
+  border: 1px solid rgba(240, 128, 0, 0.45);
+  color: #fff;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.83rem;
+  font-weight: 700;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.32);
+  animation: floaty 3.2s ease-in-out infinite;
+}
+
+.badge-top {
+  top: 1rem;
+  right: 1rem;
+}
+
+.badge-bottom {
+  bottom: 1rem;
+  left: 1rem;
+  animation-delay: 0.6s;
+}
+
+.impact-strip {
+  padding: 0.2rem 0 1.4rem;
+}
+
+.strip-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.strip-item {
+  border: 1px solid rgba(240, 128, 0, 0.24);
+  background: linear-gradient(140deg, rgba(240, 128, 0, 0.12), rgba(32, 32, 36, 0.78));
+  border-radius: 18px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.strip-item strong {
+  display: block;
+  font-size: 1.7rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.strip-item span {
+  font-size: 0.95rem;
+  color: #dfdfe6;
 }
 
 .section {
@@ -231,6 +323,31 @@ p {
   object-fit: cover;
   border-radius: 16px;
   border: 1px solid var(--border);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.gallery-grid img:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+}
+
+.testimonials .cards {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.quote-card p {
+  color: #d8d8e0;
+  font-size: 1rem;
+}
+
+.quote-card h3 {
+  margin-top: 0.9rem;
+  margin-bottom: 0;
+  color: var(--accent);
+  font-size: 1rem;
 }
 
 .contact-card {
@@ -238,6 +355,7 @@ p {
   border: 1px solid rgba(240, 128, 0, 0.38);
   background: linear-gradient(130deg, rgba(240, 128, 0, 0.13), rgba(32, 32, 36, 0.95));
   padding: 2rem;
+  box-shadow: 0 0 0 1px rgba(240, 128, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .footer {
@@ -248,6 +366,61 @@ p {
 .footer p {
   font-size: 0.95rem;
   text-align: center;
+}
+
+.whatsapp-float {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 30;
+  border-radius: 999px;
+  padding: 0.72rem 1.1rem;
+  font-weight: 800;
+  color: #111;
+  background: linear-gradient(135deg, var(--accent), #ff9a2e);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 14px 30px rgba(224, 80, 16, 0.42);
+  animation: pulseGlow 2.2s infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 14px 30px rgba(224, 80, 16, 0.42);
+  }
+  50% {
+    box-shadow: 0 18px 38px rgba(240, 128, 0, 0.65);
+  }
 }
 
 @media (max-width: 960px) {
@@ -261,7 +434,9 @@ p {
 
   .hero-grid,
   .about-grid,
-  .services .cards {
+  .services .cards,
+  .testimonials .cards,
+  .strip-grid {
     grid-template-columns: 1fr;
   }
 
@@ -272,6 +447,10 @@ p {
   .hero-card img,
   .about-image img {
     min-height: 320px;
+  }
+
+  .floating-badge {
+    font-size: 0.78rem;
   }
 }
 
@@ -294,6 +473,17 @@ p {
 
   .hero {
     padding-top: 3rem;
+  }
+
+  .hero-points li {
+    font-size: 0.83rem;
+  }
+
+  .whatsapp-float {
+    left: 0.7rem;
+    right: 0.7rem;
+    bottom: 0.7rem;
+    text-align: center;
   }
 
   .gallery-grid {
