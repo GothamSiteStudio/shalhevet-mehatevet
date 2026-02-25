@@ -646,6 +646,14 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 14px 30px rgba(224, 80, 16, 0.42);
   animation: pulseGlow 2.2s infinite;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-float-icon {
+  display: none;
 }
 
 /* ───── Hamburger Menu ───── */
@@ -1050,10 +1058,27 @@ p {
   }
 
   .whatsapp-float {
-    left: 0.7rem;
-    right: 0.7rem;
-    bottom: 0.7rem;
+    left: auto;
+    right: 1rem;
+    bottom: 1rem;
     text-align: center;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #25D366;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45);
+  }
+
+  .whatsapp-float-text {
+    display: none;
+  }
+
+  .whatsapp-float-icon {
+    display: block;
   }
 
   .gallery-grid {
