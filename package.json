@@ -1,0 +1,16 @@
+{
+  "name": "shalhevet-mehatevet",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Shalhevet Mehatevet - bilingual landing site (Cloudflare Workers static assets + lead form API)",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "check": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.149.0"
+  }
+}

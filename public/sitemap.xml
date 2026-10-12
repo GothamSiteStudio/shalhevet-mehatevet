@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://shalhevetmehatevet.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shalhevetmehatevet.com/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://shalhevetmehatevet.com/he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalhevetmehatevet.com/"/>
+  </url>
+  <url>
+    <loc>https://shalhevetmehatevet.com/he</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shalhevetmehatevet.com/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://shalhevetmehatevet.com/he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalhevetmehatevet.com/"/>
+  </url>
+  <url>
+    <loc>https://shalhevetmehatevet.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shalhevetmehatevet.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://shalhevetmehatevet.com/he/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalhevetmehatevet.com/privacy"/>
+  </url>
+  <url>
+    <loc>https://shalhevetmehatevet.com/he/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shalhevetmehatevet.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://shalhevetmehatevet.com/he/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalhevetmehatevet.com/privacy"/>
+  </url>
+  <url>
+    <loc>https://shalhevetmehatevet.com/accessibility</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shalhevetmehatevet.com/accessibility"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://shalhevetmehatevet.com/he/accessibility"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalhevetmehatevet.com/accessibility"/>
+  </url>
+  <url>
+    <loc>https://shalhevetmehatevet.com/he/accessibility</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shalhevetmehatevet.com/accessibility"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://shalhevetmehatevet.com/he/accessibility"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalhevetmehatevet.com/accessibility"/>
+  </url>
+</urlset>

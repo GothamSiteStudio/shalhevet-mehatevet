@@ -1,0 +1,13 @@
+# dependencies and wrangler's local state (local KV, simulated emails, build cache)
+node_modules/
+.wrangler/
+
+# local secrets - never commit (LEAD_TO lives in a Worker secret)
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,52 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "shalhevet-mehatevet",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+
+  // Keep the *.workers.dev address for previews (the Worker marks it noindex).
+  "workers_dev": true,
+
+  // Production domain. www must reach the Worker too: it is the Worker that 301s it to the apex.
+  "routes": [
+    { "pattern": "shalhevetmehatevet.com", "custom_domain": true },
+    { "pattern": "www.shalhevetmehatevet.com", "custom_domain": true }
+  ],
+
+  // With "routes" present, wrangler dev would otherwise present the production hostname to the
+  // Worker and the localhost-only behaviour (form without email, no HSTS) would stop working.
+  "dev": { "host": "localhost" },
+
+  // The static site. Every request passes through the Worker first (security and cache headers).
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": true
+  },
+
+  "observability": { "enabled": true },
+
+  // Sender of the lead notification. Must be an address on a domain with Email Routing enabled.
+  // The recipients are NOT here: LEAD_TO is a secret (npx wrangler secret put LEAD_TO),
+  // a comma-separated list of verified Email Routing destination addresses.
+  "vars": {
+    "LEAD_FROM": "leads@shalhevetmehatevet.com"
+  },
+
+  // Email Routing "send email" binding (free plan: verified destination addresses only).
+  "send_email": [{ "name": "EMAIL" }],
+
+  // 90-day backup copy of every lead (namespace "shalhevet-mehatevet-leads", created by the first deploy).
+  "kv_namespaces": [{ "binding": "LEADS", "id": "513dd06ece7448e4914a6b512eea21dd" }],
+
+  // 5 form submissions a minute per visitor IP. namespace_id is any integer unique in the account.
+  "ratelimits": [
+    {
+      "name": "LEAD_LIMITER",
+      "namespace_id": "1001",
+      "simple": { "limit": 5, "period": 60 }
+    }
+  ]
+}

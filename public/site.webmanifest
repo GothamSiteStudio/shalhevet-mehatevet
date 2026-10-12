@@ -1,0 +1,22 @@
+{
+  "name": "Shalhevet Mehatevet",
+  "short_name": "Shalhevet",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0e0c0b",
+  "theme_color": "#0e0c0b",
+  "icons": [
+    {
+      "src": "/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
