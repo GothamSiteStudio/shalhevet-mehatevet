@@ -10,7 +10,7 @@
   _paq.push(['enableLinkTracking']);
   var u = 'https://matomo.alphalockandsafe.com/matomo/';
   _paq.push(['setTrackerUrl', u + 'matomo.php']);
-  _paq.push(['setSiteId', '2']);
+  _paq.push(['setSiteId', '28']);
   var g = document.createElement('script');
   g.async = true;
   g.src = u + 'matomo.js';

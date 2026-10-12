@@ -25,6 +25,8 @@ public/                      האתר עצמו. כל מה שכאן עולה לא
   assets/img/                תמונות, לוגו, אייקונים ותמונות שיתוף
 src/worker.js                ה־Worker: טופס הלידים, הפניות, כותרות אבטחה ומטמון
 wrangler.jsonc               הגדרות Cloudflare
+index.html                   רק הפניה מהכתובת הישנה ב־GitHub Pages אל הדומיין החדש. לא חלק מהאתר
+images/, content.txt         חומרי המקור שהתקבלו מהלקוחה (תמונות מקוריות, לוגו, טקסט ראשוני)
 ```
 
 כתובות בלי סיומת ובלי לוכסן בסוף: `public/he/privacy.html` מוגש ב־`/he/privacy`.
@@ -156,9 +158,7 @@ npm run tail
 
 ## אנליטיקס
 
-האתר משתמש ב־Matomo שמאוחסן אצל מפתח האתר (`matomo.alphalockandsafe.com`, אתר מספר 2). `analytics.js` נטען רק כשהכתובת היא `shalhevetmehatevet.com`, כך ש־localhost וכתובות התצוגה המקדימה לא מלכלכים את הנתונים. אין פיקסל `<noscript>`.
-
-**לבדוק:** נכון לאוקטובר 2026 שרת ה־Matomo מחזיר 400 לכל בקשת מעקב עם אתר מספר 2 (כמו לאתר שלא קיים), כך שביקורים לא נרשמים. צריך לוודא ב־Matomo מה מספר האתר הנכון (או ליצור אתר חדש לכתובת `shalhevetmehatevet.com`) ולעדכן את `setSiteId` ב־`analytics.js`.
+האתר משתמש ב־Matomo שמאוחסן אצל מפתח האתר (`matomo.alphalockandsafe.com`, אתר מספר 28, "Shalhevet Mehatevet", נפתח באוקטובר 2026 לדומיין החדש). `analytics.js` נטען רק כשהכתובת היא `shalhevetmehatevet.com`, כך ש־localhost וכתובות התצוגה המקדימה לא מלכלכים את הנתונים. אין פיקסל `<noscript>`.
 
 ה־Web Analytics (RUM) של Cloudflare כבוי לדומיין בכוונה: הוא מזריק סקריפט שה־CSP חוסם, ומדיניות הפרטיות מציינת רק את Matomo.
 
