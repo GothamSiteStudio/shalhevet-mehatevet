@@ -143,6 +143,7 @@
     <li>Notes I write for myself about your coaching. They are not shown to you in the app, but I will show them to you if you ask</li>
     <li>When you last updated, so I know when to check in on you</li>
     <li>When you accepted the privacy policy, and which version</li>
+    <li>If you allowed notifications on your phone: your phone's address in the notification service, and the phone type (iPhone or Android)</li>
   </ul>
   <p>Your password is not stored as is. Only a one-way encrypted code (a hash) of it is kept, so no one, not even me, can see it.</p>
   <p>Weight, measurements, and a food diary are personal, sensitive information. Please only write medical details in the app when they matter for your coaching, for example an injury your workouts need to take into account.</p>
@@ -163,6 +164,14 @@
   </ul>
   <p>You are not legally required to give me this information. But without your account details and your consent the app can't be used, and without the updates you log it is hard for me to tailor your coaching.</p>
 
+  <h3>Phone notifications</h3>
+  <p>When I send you a message, the app can tell you about it with a notification on your phone, and when you write to me, I get one too. Notifications only arrive if you allowed them when the app asked. A notification shows the sender's name and the start of the message, like WhatsApp.</p>
+  <ul>
+    <li>You can turn notifications off, or hide the message text on the lock screen, at any time in your phone's settings.</li>
+    <li>When you sign out, your phone is removed from the notification list. When your account is deleted, all of its phones are deleted with it. A phone where the app has not been opened for six months leaves the list on its own.</li>
+    <li>The browser version has no notifications.</li>
+  </ul>
+
   <h3>Who sees the information</h3>
   <ul>
     <li>Me, your coach. I see all the information in your account.</li>
@@ -173,11 +182,11 @@
   <ul>
     <li><strong>Supabase</strong>: the database, sign-in, and password reset emails. All the information described above is stored there, on servers in the European Union (Frankfurt, Germany).</li>
     <li><strong>Vercel</strong>: hosts the browser version and sends the app's files to your browser. Your information itself travels directly between your browser and Supabase.</li>
-    <li><strong>Expo</strong>: builds the phone app and delivers updates to it. When the app checks for an update, it sends Expo a random installation ID, the device type, the app version, and the IDs of the updates it has, including any update that failed to open. These IDs are not linked to your name or your account.</li>
+    <li><strong>Expo</strong>: builds the phone app, delivers updates to it, and delivers notifications to your phone. For a notification it receives your phone's address and what the notification shows (the sender's name and the start of the message), and passes them to Apple or Google. When the app checks for an update, it sends Expo a random installation ID, the device type, the app version, and the IDs of the updates it has, including any update that failed to open. These IDs are not linked to your name or your account.</li>
     <li><strong>jsDelivr</strong>: a public file delivery service that the exercise images load from. Like any site that shows an image, it sees your device's IP address while the image loads, and it receives nothing from your account.</li>
-    <li><strong>Apple</strong> and <strong>Google</strong>: the stores you download the app from. Their own policies apply to the download. They may pass me aggregated figures, such as the number of downloads, and crash reports, depending on the settings you chose on your device.</li>
+    <li><strong>Apple</strong> and <strong>Google</strong>: the stores you download the app from. Their own policies apply to the download. They may pass me aggregated figures, such as the number of downloads, and crash reports, depending on the settings you chose on your device. They also deliver notifications to your phone: on iPhone through the Apple Push Notification service, and on Android through Google's Firebase Cloud Messaging.</li>
   </ul>
-  <p>Vercel and Expo are US companies, so some of the information described for them is transferred outside Israel and the European Union. I only work with providers that commit to protecting the information at a level no lower than described here, and to using it only to provide their service. Other than that, I will only share information with anyone else if the law requires me to.</p>
+  <p>Vercel and Expo are US companies, and so are the notification services of Apple and Google, so some of the information described for them is transferred outside Israel and the European Union. I only work with providers that commit to protecting the information at a level no lower than described here, and to using it only to provide their service. Other than that, I will only share information with anyone else if the law requires me to.</p>
 
   <h3>Keeping the information secure</h3>
   <ul>
