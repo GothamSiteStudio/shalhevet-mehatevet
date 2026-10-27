@@ -36,4 +36,28 @@
     <xhtml:link rel="alternate" hreflang="he" href="https://shalhevetmehatevet.com/he/accessibility"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://shalhevetmehatevet.com/accessibility"/>
   </url>
+  <url>
+    <loc>https://shalhevetmehatevet.com/delete-account</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shalhevetmehatevet.com/delete-account"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://shalhevetmehatevet.com/he/delete-account"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalhevetmehatevet.com/delete-account"/>
+  </url>
+  <url>
+    <loc>https://shalhevetmehatevet.com/he/delete-account</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shalhevetmehatevet.com/delete-account"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://shalhevetmehatevet.com/he/delete-account"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalhevetmehatevet.com/delete-account"/>
+  </url>
+  <url>
+    <loc>https://shalhevetmehatevet.com/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shalhevetmehatevet.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://shalhevetmehatevet.com/he/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalhevetmehatevet.com/terms"/>
+  </url>
+  <url>
+    <loc>https://shalhevetmehatevet.com/he/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shalhevetmehatevet.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://shalhevetmehatevet.com/he/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shalhevetmehatevet.com/terms"/>
+  </url>
 </urlset>

@@ -746,6 +746,12 @@ textarea.field__input { min-height: 6.25rem; resize: vertical; line-height: 1.5;
 .legal__contact .icon { width: 1.35rem; height: 1.35rem; }
 .legal .legal__end { margin-block-start: 2rem; }
 .legal__end .legal__back { margin-block-end: 0; }
+/* The "on this page" box under the lead of the privacy page, a card like the contact card. */
+.legal .legal__toc {
+  margin-block-start: 1.75rem; padding: 1rem 1.25rem;
+  border: 1px solid var(--line); border-radius: var(--r); background: var(--bg-2);
+}
+.legal .legal__toc-title { font-weight: 700; color: var(--text); }
 /* The language suggestion sits in the page flow on these pages, so it never covers the article. */
 .lang-bar--inline { position: static; margin-block-start: .75rem; }
 /* /legal pages */
