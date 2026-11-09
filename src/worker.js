@@ -46,11 +46,11 @@ const LANGUAGE_LABELS = { he: "עברית", en: "אנגלית" };
 
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' https://matomo.alphalockandsafe.com",
+  "script-src 'self' https://matomo.gothamsitestudio.com https://matomo.alphalockandsafe.com",
   "style-src 'self'",
-  "img-src 'self' data: https://matomo.alphalockandsafe.com",
+  "img-src 'self' data: https://matomo.gothamsitestudio.com https://matomo.alphalockandsafe.com",
   "font-src 'self'",
-  "connect-src 'self' https://matomo.alphalockandsafe.com",
+  "connect-src 'self' https://matomo.gothamsitestudio.com https://matomo.alphalockandsafe.com",
   "form-action 'self'",
   "frame-ancestors 'none'",
   "base-uri 'self'",

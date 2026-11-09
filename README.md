@@ -158,7 +158,7 @@ npm run tail
 
 ## אנליטיקס
 
-האתר משתמש ב־Matomo שמאוחסן אצל מפתח האתר (`matomo.alphalockandsafe.com`, אתר מספר 28, "Shalhevet Mehatevet", נפתח באוקטובר 2026 לדומיין החדש). `analytics.js` נטען רק כשהכתובת היא `shalhevetmehatevet.com`, כך ש־localhost וכתובות התצוגה המקדימה לא מלכלכים את הנתונים. אין פיקסל `<noscript>`.
+האתר משתמש ב־Matomo שמאוחסן אצל מפתח האתר (`matomo.gothamsitestudio.com`, אתר מספר 28, "Shalhevet Mehatevet", נפתח באוקטובר 2026 לדומיין החדש). `analytics.js` נטען רק כשהכתובת היא `shalhevetmehatevet.com`, כך ש־localhost וכתובות התצוגה המקדימה לא מלכלכים את הנתונים. אין פיקסל `<noscript>`.
 
 ה־Web Analytics (RUM) של Cloudflare כבוי לדומיין בכוונה: הוא מזריק סקריפט שה־CSP חוסם, ומדיניות הפרטיות מציינת רק את Matomo.
 

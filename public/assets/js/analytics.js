@@ -8,7 +8,7 @@
   _paq.push(['setDomains', ['*.shalhevetmehatevet.com']]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
-  var u = 'https://matomo.alphalockandsafe.com/matomo/';
+  var u = 'https://matomo.gothamsitestudio.com/matomo/';
   _paq.push(['setTrackerUrl', u + 'matomo.php']);
   _paq.push(['setSiteId', '28']);
   var g = document.createElement('script');
